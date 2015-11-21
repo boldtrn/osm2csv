@@ -10,6 +10,9 @@ Create jar with:
 Use the jar with:
 `java -jar build/libs/osm2csv.jar -from <something.osm.pbf> -to <folder that shall contain the csv files>`
 
+The csvs can be loaded to Node4J with this command:
+`neo4j-import --into <path to the database> --nodes <path to nodes.csv> --relationships <path to edges.csv>`
+
 ## Note
 
 Right now this tool is quite specific. It filters all non driving related ways and creates edges that connect each node.
